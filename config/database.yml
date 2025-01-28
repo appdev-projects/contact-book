@@ -22,8 +22,9 @@ default: &default
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
+  adapter: sqlite3
   <<: *default
-  database: rails_template_development
+  database: my_contact_book
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
