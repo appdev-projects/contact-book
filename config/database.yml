@@ -23,25 +23,25 @@ default: &default
 development:
   primary: &primary_development
     <<: *default
-    database: contact_book_development
+    database: rails_8_template_development
   cache:
     <<: *primary_development
-    database: contact_book_development_cache
+    database: rails_8_template_development_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_development
-    database: contact_book_development_queue
+    database: rails_8_template_development_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_development
-    database: contact_book_development_cable
+    database: rails_8_template_development_cable
     migrations_paths: db/cable_migrate
 
   # The specified database role being used to connect to PostgreSQL.
   # To create additional roles in PostgreSQL see `$ createuser --help`.
   # When left blank, PostgreSQL will use the default role. This is
   # the same name as the operating system user running Rails.
-  #username: contact_book
+  #username: rails_8_template
 
   # The password associated with the PostgreSQL role (username).
   #password:
@@ -69,7 +69,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: contact_book_test
+  database: rails_8_template_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -98,13 +98,13 @@ production:
     encoding: utf8
   cache:
     <<: *primary_production
-    database: contact_book_production_cache
+    database: rails_8_template_production_cache
     migrations_paths: db/cache_migrate
   queue:
     <<: *primary_production
-    database: contact_book_production_queue
+    database: rails_8_template_production_queue
     migrations_paths: db/queue_migrate
   cable:
     <<: *primary_production
-    database: contact_book_production_cable
+    database: rails_8_template_production_cable
     migrations_paths: db/cable_migrate
